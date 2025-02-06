@@ -9,14 +9,12 @@ import java.net.http.HttpResponse;
 
 public class TriviaApiClient {
 
-    private static final String API_URL = "https://opentdb.com/api.php?amount=10";
-
-    public Questions fetchQuestions(int amount, int category, String difficulty, String type) throws Exception {
+        public Questions fetchQuestions(int amount, int category, String difficulty, String type) throws Exception {
         String apiUrl = String.format("https://opentdb.com/api.php?amount=%d&category=%d&difficulty=%s&type=%s",
                 amount, category, difficulty, type);
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(API_URL))
+                .uri(URI.create(apiUrl))
                 .GET()
                 .build();
 
