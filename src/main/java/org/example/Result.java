@@ -28,7 +28,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 }) // Καθορίζει τη σειρά των πεδίων στο JSON
 //@Generated("jsonschema2pojo")
 public class Result {
-//Ορίζομυε τα πεδία της κλάσης με αντιστοίχιση στα ονόματα JSON
+//Ορίζουμε τα πεδία της κλάσης με αντιστοίχιση στα ονόματα JSON
     @JsonProperty("type") // Ορίζει το αντίστοιχο JSON property
     private String type; // Ο τύπος της ερώτησης (π.χ., "multiple" ή "boolean")
     @JsonProperty("difficulty")

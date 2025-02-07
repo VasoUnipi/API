@@ -17,7 +17,7 @@ public class TriviaApiClient {
      * @param amount Ο αριθμός των ερωτήσεων που θα ανακτηθούν
      * @param category Η κατηγορία των ερωτήσεων (σύμφωνα με το API της Open Trivia Database)
      * @param difficulty Το επίπεδο δυσκολίας των ερωτήσεων ("easy", "medium" ή "hard")
-     * @param type Ο τύπος των ερωτήσεων ("multiple" για πολλαπλής επιλογής, "boolean" για αλήθεια/ψέμα)
+     * @param type Ο τύπος των ερωτήσεων ("multiple" για πολλαπλής επιλογής, "boolean" για σωστό/λάθος)
      * @return Ένα αντικείμενο Questions που περιέχει τις ερωτήσεις απόκρισης του API
      * @throws Exception Σε περίπτωση αποτυχίας του HTTP αιτήματος ή αποτυχίας μετατροπής JSON σε αντικείμενο Java
      */
@@ -32,7 +32,7 @@ public class TriviaApiClient {
                 .uri(URI.create(apiUrl)) // Καθορισμός του URI του API
                 .GET() // Ορισμός της HTTP μεθόδου ως GET
                 .build();
-        // Αποστολή του HTTP αιτήματος και λήψη της απόκρισης ως συμβολοσειρά
+        // Αποστολή του HTTP αιτήματος και λήψη της απόκρισης ως συμβολοσειρά string
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 // Έλεγχος αν η απόκριση είναι επιτυχής (200 OK)
             if (response.statusCode() != 200) {
@@ -55,7 +55,6 @@ public class TriviaApiClient {
             TriviaApiClient apiClient = new TriviaApiClient();
             // Παράδειγμα δοκιμής με 5 ερωτήσεις, κατηγορία "Science: Computers" (18), δυσκολία "medium", τύπο "multiple"
             Questions questions = apiClient.fetchQuestions(5, 18, "medium", "multiple");
-            // Εκτύπωση των ερωτήσεων στην κονσόλα
             // Εκτύπωση των ερωτήσεων στην κονσόλα
             System.out.println("Ερωτήσεις που ελήφθησαν από το API:");
             System.out.println(questions);
