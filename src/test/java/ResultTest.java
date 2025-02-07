@@ -17,6 +17,8 @@ class ResultTest {
         result = new Result();
     }
 
+    // Χρήση εικονικών παραμέτρων για την κλήση
+// Χειροκίνητη εισαγωγή για λόγους δοκιμών
     @Test
     void testConstructorAndGetters() {
         List<String> incorrectAnswers = List.of("A coffee brand", "A car model", "An island");

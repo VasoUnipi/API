@@ -34,10 +34,10 @@ class TriviaApiClientTest {
         MockitoAnnotations.openMocks(this);
         apiClient = new TriviaApiClient();
 
-        // Mock JSON response
+        // Εικονικό JSON
         String fakeJson = "{ \"response_code\": 0, \"results\": [ { \"question\": \"What is Java?\", \"correct_answer\": \"A programming language\", \"incorrect_answers\": [\"A coffee brand\", \"A car model\", \"An island\"] } ] }";
 
-        // Mock the HTTP response
+        // Εικονικό HTTP response
         when(mockHttpClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class)))
                 .thenReturn(mockResponse);
         when(mockResponse.body()).thenReturn(fakeJson);
@@ -45,7 +45,7 @@ class TriviaApiClientTest {
 
     @Test
     void testFetchQuestions() throws Exception {
-        // Χρησιμοποιούμε τον ObjectMapper για να διαβάσουμε το mock JSON
+        // Χρησιμοποιούμε τον ObjectMapper για να διαβάσουμε το mock JSON (εικονικό)
         ObjectMapper mapper = new ObjectMapper();
         Questions questions = mapper.readValue(mockResponse.body(), Questions.class);
 

@@ -17,6 +17,7 @@ class QuestionsTest {
         questions = new Questions();
     }
 
+    // Χρήση εικονικών παραμέτρων για την κλήση
     @Test
     void testConstructorAndGetters() {
         List<Result> results = List.of(new Result("multiple", "medium", "Science", "What is Java?", "A programming language", List.of("A coffee brand", "A car model", "An island")));
