@@ -26,12 +26,12 @@
             <scope>test</scope><!-- Χρησιμοποιείται μόνο για δοκιμές -->
         </dependency>
 
-        <!-- JUnit 5 Engine: Μηχανισμός εκτέλεσης των τεστ-->
+        <!-- JUnit 5 για εκτέλεση unit tests -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.10.0</version>
-            <scope>test</scope>
+            <version>5.10.0</version> <!-- Ενημερωμένη έκδοση -->
+            <scope>test</scope> <!-- Χρήση μόνο για testing, δεν συμπεριλαμβάνεται στο τελικό build -->
         </dependency>
 
         <!-- JUnit Platform Launcher (απαραίτητο για IntelliJ) -->
@@ -42,7 +42,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- HttpClient: Βιβλιοθήκη για αποστολή HTTP αιτήσεων -->
+        <!-- HttpClient: Βιβλιοθήκη για αιτήσεις σε REST APIs -->
         <dependency>
             <groupId>org.apache.httpcomponents.client5</groupId>
             <artifactId>httpclient5</artifactId>
