@@ -2,27 +2,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!--    Ορισμός της έκδοσης του μοντέλου του POM-->
     <modelVersion>4.0.0</modelVersion>
-
+    <!-- Ορισμός βασικών χαρακτηριστικών του έργου -->
     <groupId>org.example</groupId>
-    <artifactId>API</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>API</artifactId><!-- Όνομα του project -->
+    <version>1.0-SNAPSHOT</version><!-- Version του project -->
 
     <properties>
+        <!-- Ορισμός της έκδοσης Java που χρησιμοποιείται -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <!-- Ορισμός του encoding για τη διασφάλιση σωστής ανάγνωσης χαρακτήρων -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
+        <!-- Εξαρτήσεις που απαιτούνται για το project -->
         <!-- JUnit 5 API -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.10.0</version>  <!-- Ενημερωμένη έκδοση -->
-            <scope>test</scope>
+            <scope>test</scope><!-- Χρησιμοποιείται μόνο για δοκιμές -->
         </dependency>
 
-        <!-- JUnit 5 Engine -->
+        <!-- JUnit 5 Engine: Μηχανισμός εκτέλεσης των τεστ-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -38,25 +42,20 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- HttpClient για HTTP αιτήσεις -->
+        <!-- HttpClient: Βιβλιοθήκη για αποστολή HTTP αιτήσεων -->
         <dependency>
             <groupId>org.apache.httpcomponents.client5</groupId>
             <artifactId>httpclient5</artifactId>
             <version>5.2</version>
         </dependency>
         <dependency>
+            <!-- Mockito: Βιβλιοθήκη για mocking αντικειμένων στις δοκιμές -->
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>5.4.0</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- Jackson για την αποσειροποίηση JSON -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.15.0</version>
-        </dependency>
+        <!-- Jackson: Βιβλιοθήκη για μετατροπή JSON σε αντικείμενα Java -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
