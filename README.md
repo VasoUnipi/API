@@ -16,6 +16,7 @@ The **Trivia API** is a Java library that enables retrieving trivia questions fr
 - **JUnit 5 & Mockito** (for testing)
 
 📥 Installation & Execution
+
 1️⃣ **Clone the Repository**
 git clone https://github.com/VasoUnipi/API.git
 cd API
