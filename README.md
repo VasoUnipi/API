@@ -75,6 +75,7 @@ The API was tested with JUnit 5 and Mockito. The tests include:
 ✅ Mock testing for fetchQuestions()
 
 ✅ Handling invalid JSON responses
+
 -------------------------------------------------------------------------------------------------
 
 🏆 Thank you for using the API! 🎉
