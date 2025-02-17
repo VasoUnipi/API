@@ -30,30 +30,51 @@ mvn clean install
 3️⃣ Generate the JAR File
 
 mvn package
+
 The .jar file will be created inside the target/ folder.
 
 🛠️ Using the API in Your Application
 You can use the Trivia API in any Java application by adding the .jar file to your project.
 
+-------------------------------------------------------------------------------------------------
+
 📂 Project Structure
 
 📁 API
+
  ┣ 📂 src
+ 
  ┃ ┣ 📂 main
+ 
  ┃ ┃ ┣ 📂 java
+ 
  ┃ ┃ ┃ ┣ 📜 TriviaApiClient.java
+ 
  ┃ ┃ ┃ ┣ 📜 Questions.java
+ 
  ┃ ┃ ┃ ┗ 📜 Result.java
+ 
  ┃ ┣ 📂 test
+ 
  ┃ ┃ ┣ 📜 TriviaApiClientTest.java
+ 
  ┃ ┃ ┣ 📜 QuestionTest.java
+ 
  ┃ ┃ ┣ 📜 ResultTest.java
+ 
  ┣ 📜 pom.xml
+ 
  ┣ 📜 README.md
+ 
+-------------------------------------------------------------------------------------------------
 
 🧪 Testing
+
 The API was tested with JUnit 5 and Mockito. The tests include: 
+
 ✅ Mock testing for fetchQuestions()
+
 ✅ Handling invalid JSON responses
+-------------------------------------------------------------------------------------------------
 
 🏆 Thank you for using the API! 🎉
